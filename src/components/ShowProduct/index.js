@@ -23,7 +23,7 @@ class ShowProduct extends Component {
             </div>
             <div className="product-bio">
               <p id="product-description">{currentProduct.description}</p>
-              <p id="product-price">${currentProduct.price}</p>
+              <p id="product-price">₹{currentProduct.price}</p>
               <Icon small id="add-icon">add_shopping_cart</Icon>
             </div>
             <div className="product-review">
@@ -45,9 +45,9 @@ class ShowProduct extends Component {
               && product.type === currentProduct.type
               && product.name !== currentProduct.name) {
               return(
-                <Link to={`/products/${product.id}`}>
+                <Link to={`/products/₹{product.id}`}>
                   <div key={product.id} className="item">
-                    <Link to={`/products/${product.id}`}>
+                    <Link to={`/products/₹{product.id}`}>
                     <div className="product-img">
                       <img alt={product.name} src={product.img} />
                     </div>
@@ -57,7 +57,7 @@ class ShowProduct extends Component {
                     </div>
                     </Link>
                     <div className="price-add">
-                      <h5 id="product-price">${product.price}</h5>
+                      <h5 id="product-price">₹{product.price}</h5>
                       <Icon small id="add-icon">add_shopping_cart</Icon>
                     </div>
                   </div>

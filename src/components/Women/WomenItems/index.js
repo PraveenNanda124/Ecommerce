@@ -11,7 +11,7 @@ const WomenItems = () => (
       if (product.gender === "women") {
         return(
           <div className="item">
-            <Link to={`/products/${product.id}`}>
+            <Link to={`/products/₹{product.id}`}>
             <div className="product-img">
               <img alt={product.name} src={product.img} />
             </div>
@@ -21,7 +21,7 @@ const WomenItems = () => (
             </div>
             </Link>
             <div className="price-add">
-              <h5 id="product-price">${product.price}</h5>
+              <h5 id="product-price">₹{product.price}</h5>
               <Icon small onClick={() => this.addProduct(product)} id="add-icon">add_shopping_cart</Icon>
             </div>
           </div>

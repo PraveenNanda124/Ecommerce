@@ -10,7 +10,7 @@ const AllItems = () => (
   <div className="items">
     {map(PRODUCTS, (product)=> (
       <div key={product.id} className="item">
-        <Link to={`/products/${product.id}`}>
+        <Link to={`/products/₹{product.id}`}>
         <div className="product-img">
           <img alt={product.name} src={product.img} />
         </div>
@@ -20,7 +20,7 @@ const AllItems = () => (
         </div>
         </Link>
         <div className="price-add">
-          <h5 id="product-price">${product.price}</h5>
+          <h5 id="product-price">₹{product.price}</h5>
           <Icon small id="add-icon">add_shopping_cart</Icon>
         </div>
       </div>

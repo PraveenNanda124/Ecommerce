@@ -21,7 +21,7 @@ const MenItems = () => (
             </div>
             </Link>
             <div className="price-add">
-              <h5 id="product-price">${product.price}</h5>
+              <h5 id="product-price">₹{product.price}</h5>
               <Icon small onClick={() => this.addProduct(product)} id="add-icon">add_shopping_cart</Icon>
             </div>
           </div>
